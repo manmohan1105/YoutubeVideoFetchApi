@@ -20,7 +20,7 @@ from .serializers import VideosSerializer
 from rest_framework import generics, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination
-# from fetchapi import getnewposts
+
 # Create your views here.
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -69,7 +69,7 @@ def fetch_new_videos(request):
 
           if flag:
              break
-        # getnewposts()
+        
         return HttpResponse("New videos have been fetched! Refresh Localhost to view added videos")
     except:
         return HttpResponse("Some error encountered")
